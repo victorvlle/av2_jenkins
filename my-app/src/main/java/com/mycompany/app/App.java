@@ -1,3 +1,5 @@
+package com.mycompany.app;
+
 public class TemperatureConverter {
 
     public static double fahrenheitToCelsius(double fahrenheit) {
