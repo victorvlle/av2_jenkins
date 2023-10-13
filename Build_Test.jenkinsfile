@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Lint do Código-Fonte') {
+            steps {
+                // Execute as ferramentas de lint aqui
+            }
+        }
+        stage('Build') {
+            steps {
+                // Execute o processo de construção aqui
+            }
+        }
+        stage('Testes Unitários') {
+            steps {
+                sh 'mvn test' // Comando Maven para executar os testes
+            }
+        }
+    }
+}
+
