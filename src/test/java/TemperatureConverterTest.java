@@ -44,8 +44,7 @@ public class TemperatureConverterTest {
 */
     @Test
     public void testeFailure(){
-        FahrenheitToCelsius fahrenheitToCelsius = new TemperatureConverter();
-        assertEquals(-15.0,fahrenheitToCelsius.TemperatureConverter(5.0),0.0);
+        assertEquals(-15.0,TemperatureConverter.fahrenheitToCelsius(5.0),0.0);
     }
 }
 
