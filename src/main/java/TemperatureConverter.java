@@ -1,4 +1,4 @@
-/*package com.mycompany.app;
+package com.mycompany.app;
 import java.util.Scanner;
 
 public class TemperatureConverter {
@@ -13,4 +13,3 @@ public class TemperatureConverter {
     }
 
 }
-*/
