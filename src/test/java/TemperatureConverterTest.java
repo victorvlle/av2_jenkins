@@ -6,22 +6,36 @@ import static org.junit.Assert.assertEquals;
 public class TemperatureConverterTest {
 
     @Test
-    public void testFahrenheitToCelsius() {
+    public void converterFahrenheitParaCelsius_comFahrenheitNegativo_deveRetornarCelsiusNegativo() {
+        double fahrenheit = -100;
+        double celsiusEsperado = -73.33333333333333;
 
-        double fahrenheit1 = 32.0;
-        double expectedCelsius1 = 0.0;
-        double result1 = TemperatureConverter.fahrenheitToCelsius(fahrenheit1);
-        assertEquals(expectedCelsius1, result1, 0.001);
+        double celsiusRetornado = converterFahrenheitParaCelsius(fahrenheit);
 
-        double fahrenheit2 = 68.0;
-        double expectedCelsius2 = 20.0;
-        double result2 = TemperatureConverter.fahrenheitToCelsius(fahrenheit2);
-        assertEquals(expectedCelsius2, result2, 0.001);
+        assertEquals(celsiusEsperado, celsiusRetornado);
+    }
 
-        double fahrenheit3 = -22.0;
-        double expectedCelsius3 = -30.0;
-        double result3 = TemperatureConverter.fahrenheitToCelsius(fahrenheit3);
-        assertEquals(expectedCelsius3, result3, 0.001);
+    @Test
+    public void converterFahrenheitParaCelsius_comFahrenheitZero_deveRetornarCelsiusZero() {
+        double fahrenheit = 0;
+        double celsiusEsperado = 0;
+
+        double celsiusRetornado = converterFahrenheitParaCelsius(fahrenheit);
+
+        assertEquals(celsiusEsperado, celsiusRetornado);
+    }
+
+    @Test
+    public void converterFahrenheitParaCelsius_comFahrenheitPositivo_deveRetornarCelsiusPositivo() {
+        double fahrenheit = 100;
+        double celsiusEsperado = 37.77777777777778;
+
+        double celsiusRetornado = converterFahrenheitParaCelsius(fahrenheit);
+
+        assertEquals(celsiusEsperado, celsiusRetornado);
+    }
+
+    private double converterFahrenheitParaCelsius(double fahrenheit) {
+        return (fahrenheit - 32) * 5 / 9;
     }
 }
-
