@@ -7,46 +7,26 @@ import java.beans.Transient;
 
 public class TemperatureConverterTest {
 
-/*
     @Test
-    public void teste_neg() {
-        double fahrenheit = -100;
-        double celsiusEsperado = -73.33333333333333;
-
-        double celsiusRetornado = converterFahrenheitParaCelsius(fahrenheit);
-
-        assertEquals(celsiusEsperado, celsiusRetornado);
+    public void testeSuccess(){
+        assertEquals(-12.2222, TemperatureConverter.fahrenheitToCelsius(10), 0.0);
+        assertEquals(33.8, TemperatureConverter.celsiusToFahrenheit(1), 0.0);
+        assertEquals(-15.0, TemperatureConverter.fahrenheitToCelsius(5.0), 0.0);
     }
-
-    @Test
-    public void test_zero() {
-        double fahrenheit = 0;
-        double celsiusEsperado = 0;
-
-        double celsiusRetornado = converterFahrenheitParaCelsius(fahrenheit);
-
-        assertEquals(celsiusEsperado, celsiusRetornado);
-    }
-
-    @Test
-    public void test_posi() {
-        double fahrenheit = 100;
-        double celsiusEsperado = 37.77777777777778;
-
-        double celsiusRetornado = converterFahrenheitParaCelsius(fahrenheit);
-
-        assertEquals(celsiusEsperado, celsiusRetornado);
-    }
-
-    private double converterFahrenheitParaCelsius(double fahrenheit) {
-        return (fahrenheit - 32) * 5 / 9;
-    }
-*/
+/* 
     @Test
     public void testeFailure(){
-        assertEquals(-15.0,TemperatureConverter.fahrenheitToCelsius(5.0),0.0);
-        assertEquals(-15.0,TemperatureConverter.fahrenheitToCelsius(5.0),0.0);
-        assertEquals(-15.0,TemperatureConverter.fahrenheitToCelsius(5.1),0.0);
+        assertEquals(-1.11111, TemperatureConverter.fahrenheitToCelsius(30), 0.0);
+        assertEquals(86.0,TemperatureConverter.celsiusToFahrenheit(31.0),0.0);
+        assertEquals(123.44,TemperatureConverter.celsiusToFahrenheit(65.6), 0.0);
     }
+
+    @Test
+    public void testeUninstable(){
+        assertEquals(-12.2222, TemperatureConverter.fahrenheitToCelsius(10), 0.0);
+        assertEquals(33.8, TemperatureConverter.celsiusToFahrenheit(1), 0.0);
+        assertEquals(-15.0, TemperatureConverter.fahrenheitToCelsius(5.0), 0.0);
+    }
+*/
 }
 
