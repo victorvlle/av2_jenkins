@@ -1,37 +1,39 @@
 pipeline {
     agent any
-
+    tools {
+        maven 'mvn'
+    }
     stages {
-        stage('Lint') {
-            steps {
-                sh 'mvn clean lint:lint'
-            }
-        }
-
         stage('Build') {
             steps {
-                sh 'mvn clean package'
+                script {
+                    git 'https://github.com/victorvlle/av2_jenkins.git'
+                    sh "mvn -Dmaven.test.failure.ignore=true clean package"
+                }
             }
         }
-
-        stage('Test') {
-            steps {
-                sh 'mvn clean test'
+        
+        stage('Lint do Código Fonte'){
+            steps{
+                sh 'mvn -f https://raw.githubusercontent.com/victorvlle/av2_jenkins/main/pom.xml checkstyle:checkstyle'
             }
         }
-    }
-
-    post {
-        always {
-            echo 'Pipeline finished'
+        
+        stage('Cobertura de Código'){
+            steps{
+                sh 'mvn clean test jacoco:report'
+            }
         }
-
-        success {
-            echo 'Pipeline succeeded'
-        }
-
-        failure {
-            echo 'Pipeline failed'
+        
+        stage('Testes Unitários'){
+            steps{
+                sh 'mvn test'
+            }
+            post{
+                always{
+                    junit '**/target/test-reports/*.xml'
+                }
+            }
         }
     }
 }
