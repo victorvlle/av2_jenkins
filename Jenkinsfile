@@ -6,12 +6,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                script {
-                    git 'https://github.com/victorvlle/av2_jenkins.git'
-                    sh "mvn -Dmaven.test.failure.ignore=true clean package"
-                }
+		sh "mvn package -Dmaven.test.skip=true clean package"
             }
-        }
+       }
         
         stage('Lint do Código Fonte'){
             steps{
