@@ -4,9 +4,9 @@
  "http://www.puppycrawl.com/dtds/configuration_1_3.dtd">
 <module name="Checker">
   <module name="TreeWalker">
-    <module name="EmptyBlock">
-      <property name="option" value="text"/>
+    <module name="Indentation">
+      <property name="basicOffset" value="4"/>
+      <property name="braceAdjustment" value="0"/>
     </module>
   </module>
 </module>
-
