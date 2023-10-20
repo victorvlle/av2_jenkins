@@ -9,17 +9,17 @@ public class TemperatureConverterTest {
 
     @Test
     public void testeFailure(){
-        assertEquals(-20, TemperatureConverter.fahrenheitToCelsius(30), 0.0); //correto: -1.1111111111111112
+        assertEquals(50, TemperatureConverter.celsiusToFahrenheit(10), 0.0); //correto: 10C
     }
 
     @Test
     public void testeSuccess(){
-        assertEquals(-12.222222222222221, TemperatureConverter.fahrenheitToCelsius(10), 0.0);//correto: -12.222222222222221
+        assertEquals(104, TemperatureConverter.celsiusToFahrenheit(40), 0.0);//correto: 40C
     }
 
     @Test
     public void testeSuccess2(){
-        assertEquals(-1.1, TemperatureConverter.fahrenheitToCelsius(30), 0.0);
+        assertEquals(41, TemperatureConverter.celsiusToFahrenheit(5), 0.0);//correto: 5C
     }
 }
 
