@@ -1,0 +1,25 @@
+-------------------------------------------------------------------------------
+Test set: TemperatureConverterTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.014 s <<< FAILURE! - in TemperatureConverterTest
+testeSuccess2(TemperatureConverterTest)  Time elapsed: 0.002 s  <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problem: 
+	The declared package "com.mycompany.app" does not match the expected package ""
+
+	at TemperatureConverterTest.<init>(TemperatureConverterTest.java:1)
+
+testeSuccess(TemperatureConverterTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problem: 
+	The declared package "com.mycompany.app" does not match the expected package ""
+
+	at TemperatureConverterTest.<init>(TemperatureConverterTest.java:1)
+
+testeFailure(TemperatureConverterTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problem: 
+	The declared package "com.mycompany.app" does not match the expected package ""
+
+	at TemperatureConverterTest.<init>(TemperatureConverterTest.java:1)
+
