@@ -14,12 +14,12 @@ public class TemperatureConverterTest {
 
     @Test
     public void testeSuccess(){
-        assertEquals(-12.2222, TemperatureConverter.fahrenheitToCelsius(10), 0.0);
+        assertEquals(-12.222222222222221, TemperatureConverter.fahrenheitToCelsius(10), 0.0);//correto: -12.222222222222221
     }
 
     @Test
     public void testeSuccess2(){
-        assertEquals(-12.2222, TemperatureConverter.fahrenheitToCelsius(10), 0.0);
+        assertEquals(-1.1, TemperatureConverter.fahrenheitToCelsius(30), 0.0);
     }
 }
 
