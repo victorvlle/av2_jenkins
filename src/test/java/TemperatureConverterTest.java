@@ -13,7 +13,7 @@ public class TemperatureConverterTest {
     }
 
     @Test
-    public void testeSuccess(){
+    ublic void testeSuccess(){
         assertEquals(104.0, TemperatureConverter.celsiusToFahrenheit(40.0), 0.0);//correto: 40C
     }
 
