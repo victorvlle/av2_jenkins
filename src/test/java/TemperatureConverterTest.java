@@ -14,7 +14,7 @@ public class TemperatureConverterTest {
 
     @Test
     public void testeSuccess(){
-        assertEquals(104.0, TemperatureConverter.celsiusToFahrenheit(45.0), 0.0);//correto: 40C
+        assertEquals(104.0, TemperatureConverter.celsiusToFahrenheit(40.0), 0.0);//correto: 40C
     }
 
     @Test
